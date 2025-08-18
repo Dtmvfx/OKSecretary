@@ -34,7 +34,7 @@ def start_ok(page, signals):
     try:
         global id_account
         page_goto(page, 'https://ok.ru/', signals)
-        signals.log_signal.emit(f'У ВАС 3 МИНУТЫ НА ВХОД. ПОСЛЕ АВТОРИЗАЦИИ ЗАКРОЙТЕ ОКНО ИНСТПЕКТОРА И СКРИПТ ПРОДОЛЖИТ РАБОТУ'); page.pause()
+        signals.log_signal.emit(f'ПАУЗА ДЛЯ ВХОДА В АККАУНТ. ПОСЛЕ АВТОРИЗАЦИИ ЗАКРОЙТЕ ОКНО ИНСПЕКТОРА И СКРИПТ ПРОДОЛЖИТ РАБОТУ'); page.pause()
         page.wait_for_selector('//a[@data-l="t,userPage"]')
         id_account = page.locator('//a[@data-l="t,userPage"]').get_attribute('href')
         signals.log_signal.emit(f'\n\n\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< СТАРТ ОСНОВНОГО АККАУНТА OK // {id_account} >>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n')
