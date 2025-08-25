@@ -262,7 +262,7 @@ if __name__ == "__main__":
         cb.setChecked(True)
         layout2.addWidget(cb)
     line_edit = QLineEdit()
-    line_edit.setPlaceholderText("адрес группы для инвайта: http://...")
+    line_edit.setPlaceholderText("адрес группы для инвайта: https://...")
     layout2.addWidget(line_edit)
     group2.setFixedSize(400, 200)
     def check_groups():
